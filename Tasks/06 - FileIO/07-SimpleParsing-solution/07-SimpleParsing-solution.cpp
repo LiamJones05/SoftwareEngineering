@@ -36,6 +36,7 @@ int main()
     }
     string subjectArea;
     inputStream >> subjectArea;
+    cout << "Subject area is: " << subjectArea << endl;
 
     //Read another two strings and discard
     for (unsigned int n = 0; n < 2; n++) {

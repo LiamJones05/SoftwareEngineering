@@ -48,6 +48,8 @@ int main()
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
 
+
+
     // (iii) Close
     inputStream.close();
 
