@@ -47,6 +47,14 @@ int main()
             //TODO:
             // Read the next word
             // If successful, try to convert to an integer then break from the while loop
+            iss >> nextWord;
+            if(!iss.fail()){
+                moduleNumber = stoi(nextWord);
+                moduleNumber++;
+                cout << "COMP" << moduleNumber << endl;
+
+            }
+
         }
     }
 

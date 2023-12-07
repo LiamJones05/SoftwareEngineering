@@ -33,6 +33,8 @@ int main()
         return -1;
     }
 
+
+
     //Now extract the string from this point forwards
     cout << "Found \"ID:\" at character position " << pos << endl;
     string previous  = dataString.substr(0, pos);   //Up to the location pos-1
@@ -50,6 +52,27 @@ int main()
     }
     cout << "Found " << strTag << endl;
     cout << "Followed by " << strCode << endl;
+
+    //-------------Liam's section--------------------
+    pos = dataString.find("Area:");
+    if (pos == -1) {
+        cerr << "Identifier Area: is missing from file " << endl;
+        return -1;
+    }
+    following = dataString.substr(pos);
+
+    istringstream iss2(following);
+    iss2 >> strTag >> strCode;
+    if (iss2.fail()) {
+        cerr << "Could not locate" << endl;
+        cout << "I am a failure" << endl;
+        return -1;
+    }
+    cout << "Subject area is:" << strCode << endl;
+
+    
+
+    //-------------End of Liam's section-------------
 
     //Conversion
     int code;

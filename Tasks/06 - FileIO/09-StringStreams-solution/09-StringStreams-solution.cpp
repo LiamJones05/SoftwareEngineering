@@ -36,7 +36,7 @@ int main()
         //Write each word if available
         cout << nextWord << endl;
         //Write an extra newline if we just output "Always."
-        if (nextWord == "Always.") {
+        if ((nextWord == "Always.") || (nextWord == "much.")) {
             cout << endl;
         }
         
